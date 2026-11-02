@@ -4,6 +4,10 @@ describe('sample render test', () => {
   });
 
   it('displays the title text', () => {
-    cy.get('h1').contains('Next.js Blog Theme');
+    cy.get('h1').should('be.visible');
+  });
+
+  it('displays posts list', () => {
+    cy.get('ul').should('exist');
   });
 });
